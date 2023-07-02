@@ -185,11 +185,8 @@ class: inverse center middle
 
 .center[<img src="imagenes/volumen_data.png" width="550" />]
 
-$zettabyte = 10^{12}gb$  
+$zettabyte = 10^{12}gb \approx$ 44.444.444.444 horas de video en 4k  
 
-Una película de alta resolución = 1gb
-
-1.000.000.000.000 películas
 
 
 ---
