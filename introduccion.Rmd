@@ -183,9 +183,13 @@ class: inverse center middle
 
 ## Cantidad de datos creados al año
 
-.center[<img src="imagenes/volumen_data.png" width="600" />]
+.center[<img src="imagenes/volumen_data.png" width="550" />]
 
-$zettabyte = 10^{12}gb$
+$zettabyte = 10^{12}gb$  
+
+Una película de alta resolución = 1gb
+
+1.000.000.000.000 películas
 
 
 ---
@@ -216,7 +220,7 @@ $zettabyte = 10^{12}gb$
 
 ---
 
-## Resumiento hasta ahora...
+## Resumiendo hasta ahora...
 
 - Digitalización de la comunicación
 
@@ -554,15 +558,20 @@ Queremos estudiar la ideología de los partidos
 
 Utilizaremos sus declaraciones de principios  
 
+
+.center[ <img src="imagenes/ejemplo_declaracion.png" width="600" />]
+
 --
 
-.center[ <img src="imagenes/ejemplo_declaracion.png" width="700" />]
-
+#### ¿Qué enfoque o estrategia se adecúa mejor a este problema? ¿Cuantitativo o cualitativo? 
 
 ---
 
 ## Wordfish (Slapin & Proksch, 2008)
 
+Hacemos un pre procesamiento, para representar el texto de manera numérica 
+
+--
 
 $y_{i}=Poisson(\lambda_{ij})$
 
