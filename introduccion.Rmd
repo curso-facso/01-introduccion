@@ -101,6 +101,10 @@ require(quanteda.textmodels)
 # ¿Cuáles son sus expectativas sobre el curso?
 ]
 
+¡Link encuesta!
+
+https://www.menti.com/al4d2t5k1m49
+
 ---
 class: inverse center middle
 
@@ -117,7 +121,7 @@ class: inverse center middle
 
 --
 
-### Me llamo Mario y soy estudiante de sociología
+### Me llamo Mario y tengo 21 años
 
 ---
 
@@ -570,10 +574,13 @@ Hacemos un pre procesamiento, para representar el texto de manera numérica
 
 --
 
-$y_{i}=Poisson(\lambda_{ij})$
+$y_{ij}=Poisson(\lambda_{ij})$
 
 $\lambda_{ij} = exp(\alpha_{i} + ψ_j + β_j ∗ ω_{i})$
 
+$j$: palabra
+
+$i$: partido
 
 $ω$: Parámetro que indica la posición de un actor/partido
 
@@ -656,6 +663,9 @@ Se espera participación activa de ustedes
 
 No hay pruebas
 
+--
+
+**Ausencia**: 25 de septiembre al 5 de octubre
 
 
 ---
