@@ -478,6 +478,24 @@ La muestra fue postestratificada para reponderar a las subpoblaciones
 
 ---
 
+## Dos ejemplos cercanos
+
+Tasa de rotación laboral
+- Departamento de Estadísticas del Trabajo
+- Creación y destrucción de empleos
+- SUSESO
+- Millones de registros mensuales
+
+--
+
+Proyecto REP 
+- Registro Estadístico de Personas
+- **Objetivo de mediano-largo plazo**: dejar de hacer censos
+
+
+
+---
+
 ## Lo viejo y lo nuevo
 
 Combinación entre encuestas por muestreo y fuentes no tradicionales
