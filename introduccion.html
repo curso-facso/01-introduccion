@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Métodos Computacionales para las Ciencias Sociales</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Klaus Lehmann" />
+    <script src="introduccion_files/header-attrs/header-attrs.js"></script>
+    <link href="introduccion_files/panelset/panelset.css" rel="stylesheet" />
+    <script src="introduccion_files/panelset/panelset.js"></script>
+    <link rel="stylesheet" href="xaringan-themer2.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Métodos Computacionales para las Ciencias Sociales
+]
+.subtitle[
+## Introducción
+]
+.author[
+### Klaus Lehmann
+]
+
+---
+
+
+
+
+
+
+
+
+# ¿Quién soy?
+
+- Klaus Lehmann 
+
+- klehmann@fen.uchile.cl
+
+- Sociólogo
+
+--
+
+.center[
+&lt;img src="imagenes/Logo_INE.png" width="300" /&gt;
+
+]
+--
+.center[
+### Jefe del área de ciencia de datos
+]
+
+
+---
+
+# Áreas de interés
+
+- Procesamiento de lenguaje natural
+
+- *Machine learning*
+
+- Diseños muestrales complejos
+
+- Datos geoespaciales
+
+- Técnicas de reproducibilidad
+
+--
+
+.center[
+### Mi expectativa: revisar algunas herramientas computacionales para abordar problemas del quehacer profesional
+]
+
+
+
+---
+
+
+
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+.center[
+# ¿Cuáles son sus expectativas sobre el curso?
+]
+
+¡Link encuesta!
+
+https://www.menti.com/al4d2t5k1m49
+
+---
+class: inverse center middle
+
+# ¿Qué hay de nuevo en las ciencias sociales?
+
+
+---
+
+&lt;br/&gt;
+
+.center[
+&lt;img src="imagenes/mario.png" width="300" /&gt;
+]
+
+--
+
+### Me llamo Mario y tengo 21 años
+
+---
+
+
+
+.panelset[
+.panel[.panel-name[alarma]
+.center[&lt;img src="imagenes/despertador.png" width="1000" /&gt;]
+]
+
+.panel[.panel-name[desayuno]
+.center[&lt;img src="imagenes/desayuno.png" width="1000" /&gt;]
+]
+
+.panel[.panel-name[ida]
+.center[&lt;img src="imagenes/metro_ida.png" width="1000" /&gt;]
+
+
+]
+
+.panel[.panel-name[universidad]
+.center[&lt;img src="imagenes/pantalones.png" width="1000" /&gt;]
+
+]
+
+.panel[.panel-name[vuelta]
+.center[&lt;img src="imagenes/metro_vuelta.png" width="1000" /&gt;]
+
+
+]
+
+.panel[.panel-name[videos]
+.center[&lt;img src="imagenes/tour_francia.png" width="1000" /&gt;]
+
+
+]
+
+
+]
+
+---
+
+&lt;br/&gt;
+
+.center[&lt;img src="imagenes/marcas.png" width="900" /&gt;]
+
+---
+
+## Hilbert y López (2011)
+
+.center[&lt;img src="imagenes/aumento_internet.png" width="800" /&gt;]
+
+---
+
+
+&lt;br/&gt;
+
+.center[&lt;img src="imagenes/multitud.jpg" width="800" /&gt;]
+
+
+---
+
+
+## Cantidad de datos creados al año
+
+.center[&lt;img src="imagenes/volumen_data.png" width="550" /&gt;]
+
+`\(zettabyte = 10^{12}gb \approx\)` 44.444.444.444 horas de video en 4k  
+
+
+
+---
+
+## Capacidad de cómputo
+
+.pull-left[
+&lt;img src="imagenes/capacidad.png" width="700" /&gt;
+]
+
+.pull-right[
+&lt;img src="imagenes/ajedrez.png" width="700" /&gt;
+]
+
+
+---
+
+## Abaratamiento de la tecnología
+
+.pull-left[
+&lt;img src="imagenes/costo_memoria.png" width="700" /&gt;
+]
+
+.pull-right[
+&lt;img src="imagenes/gpu.png" width="700" /&gt;
+]
+
+
+---
+
+## Resumiendo hasta ahora...
+
+- Digitalización de la comunicación
+
+- Mayor capacidad de almacenamiento y procesamiento
+
+- Abaratamiento de *hardware*
+
+
+--
+
+**Creación y almacenamiento de datos en todo momento**
+
+---
+
+## Pensemos en esto nuevamente
+
+.center[&lt;img src="imagenes/marcas.png" width="900" /&gt;]
+
+
+---
+
+## Información registrada
+
+- Preferencias de consumo
+
+--
+
+- Gustos musicales y audiovisuales
+
+--
+
+- Opiniones políticas
+
+--
+
+- Patrones de desplazamiento
+
+--
+
+- Patrones de consumo
+
+--
+
+- Cantidad, momento y tipo de interacciones
+
+
+--
+
+.center[
+### Gran cantidad de información sobre el comportamiento humano
+]
+
+--
+
+.center[
+### Gran capacidad de entender e influir
+]
+
+
+---
+
+## ¿Quién explota esta información?
+
+--
+
+.pull-left[&lt;img src="imagenes/ejemplo_empresas.png" width="400" /&gt;]
+
+--
+
+.pull-right[&lt;br/&gt;  &lt;img src="imagenes/ingeniero_informatico.jpeg" width="400" /&gt;]
+
+--
+
+
+### Ciencias Sociales Computacionales
+
+
+---
+
+## Un ejemplo (Mäntylä,  Graziotin &amp; Kuutila, 2018)
+
+*The evolution of sentiment analysis—A review of research topics, venues, and top cited papers*
+
+Publicado en *Computer Science Review*  
+
+--
+
+.center[ &lt;img src="imagenes/publicaciones_sentimiento.png" width="700" /&gt;]
+
+---
+
+## Situación de las ciencias sociales
+
+Incorporación tardía de las CS a este nuevo escenario
+
+--
+
+Durante los últimos años esto ha venido cambiando
+
+--
+
+Existe una comunidad importante de cientistas sociales que se ha sumado a esta tendencia:
+
+- Sociólogos
+- Economistas
+- Cientistas políticos
+- Lingüistas
+- Periodistas
+- Geógrafos
+- Historiadores
+
+--
+
+### Aún muy por detrás de las ciencias de la computación
+
+---
+
+class: inverse center middle
+
+#  ¿Qué hay de nuevo en las ciencias sociales?
+
+
+---
+
+## Cambios en las ciencias sociales
+
+Aumento sustantivo en la cantidad y variedad de datos
+
+--
+
+Cambios cuantitativos muy grandes, a veces implican saltos cualitativos (Salganik, 2018)
+
+--
+
+### ¿Significa que los métodos tradicionales de las ciencias sociales quedan en el pasado?
+
+
+.center[ &lt;img src="https://media.giphy.com/media/a5viI92PAF89q/giphy.gif" width="250" /&gt;]
+
+--
+
+### Los métodos de tradicionales seguirán guiándonos, pero deben ser actualizados
+
+---
+
+## Cambios en las ciencias sociales
+
+Tipos de diseño (Salganik, 2018)
+
+- Observar el comportamiento
+- Hacer preguntas
+- Diseñar experimentos
+- Colaboración masiva (bonus track)
+
+--
+
+
+.center[ &lt;img src="imagenes/duchamp.png" width="350" /&gt;]
+
+
+
+## "Listo para usar" (Duchamp) versus "hecho a la medida" (Miguel Ángel)
+
+---
+
+## Las encuestas por muestreo
+
+Tecnología muy refinada (aproximadamente 100 años)
+
+--
+
+Tiene sólidos fundamentos teóricos
+
+--
+
+Son muy costosas 
+- No pueden ser realizadas con demasiada periodicidad
+- No pueden ser demasiado grandes
+
+--
+
+La no respuesta es un fenómeno en aumento 
+
+- Problemas de sesgo
+- Menor precisión 
+- Aumento de costos
+
+---
+
+## Pobreza en Ruánda (Blumenstock,  Cadamuro, On, 2015) 
+
+
+.panelset[
+
+.panel[.panel-name[celulares]
+Datos de 1.5 millones de clientes de celulares:
+- Cantidad
+- Tiempo
+- Dirección
+- Red de contactos
+- etc
+
+]
+
+.panel[.panel-name[encuesta]
+
+
+Muestra de ~850 personas:
+
+- Características de la vivienda, bienes, entre otras
+- Índice de bienestar material (riqueza)
+
+Entrenaron un modelo para predecir riqueza
+
+`\(y = f(DatosTelefono)\)`
+
+Usaron el modelo para predecir fuera de muestra
+
+
+
+]
+
+.panel[.panel-name[granularidad]
+.center[ &lt;img src="imagenes/granularidad.png" width="500" /&gt;]
+
+]
+
+
+.panel[.panel-name[comparación]
+.center[ &lt;img src="imagenes/comparacion_ruanda.png" width="800" /&gt;]
+
+]
+
+
+]
+
+
+---
+
+## Obama versus Romney (Wang et al, 2015) 
+
+Muestra no probabilística: ~350.000 respuestas de usuarios de XBox
+
+La muestra sobrestimaba a jóvenes, a hombres y a blancos 
+ 
+La muestra fue postestratificada para reponderar a las subpoblaciones 
+
+
+--
+
+.center[ &lt;img src="imagenes/obama.png" width="600" /&gt;]
+
+
+
+---
+
+## Dos ejemplos cercanos
+
+Tasa de rotación laboral
+- Departamento de Estadísticas del Trabajo
+- Creación y destrucción de empleos
+- SUSESO
+- Millones de registros mensuales
+
+--
+
+Proyecto REP 
+- Registro Estadístico de Personas
+- **Objetivo de mediano-largo plazo**: dejar de hacer censos
+
+
+
+---
+
+## Lo viejo y lo nuevo
+
+Combinación entre encuestas por muestreo y fuentes no tradicionales
+
+Teoría estadística clásica aplicada a nuevas fuentes de información
+- SAE (Small Area Estimation)
+- Post estratificación 
+- Muestreo
+- Imputación
+
+--
+
+encuesta ==&gt; Fuente no tradicional  
+Fuente no tradicional ==&gt; encuesta  
+
+--
+
+### Las encuestas por muestreo no desaparecerán, sino que los diseños evolucionarán 
+
+
+---
+## Aporte del machine learning
+
+.center[ &lt;img src="imagenes/machine-learning-paper.png" width="500" /&gt;]
+
+Aumento en la capacidad de codificación 
+- Métodos supervisados
+- Construcción teórica de categorías
+- Razonamiento deductivo
+
+--
+
+Nuevas herramientas para la reducción de dimensionalidad
+- Razonamiento inductivo
+- Dejar que los datos hablen
+- Interpretación teórica a postiori
+
+--
+
+Flexibilización de algunos supuestos 
+- Los métodos de machine learning no descansan en supuestos fuertes
+
+---
+
+class: inverse center middle
+
+# ¿Cómo impacta esto en nuestro perfil profesional?
+
+---
+
+## Nuevas habilidades requeridas
+
+.center[ &lt;img src="imagenes/nuevas_habilidades.png" width="800" /&gt;]
+
+---
+
+## Nuevas habilidades requeridas
+
+
+La sociología entra en el campo de las tecnologías de la información
+
+--
+
+Mayor colaboración con ingenieros informáticos
+
+--
+
+Disposición a estudiar y aprender nuevas herramientas constantemente 
+
+--
+
+Mayor disposición a salir de nuestra zona de confort 
+
+--
+
+Apertura hacia nuevas metodologías y fuentes de información 
+
+---
+
+## Para terminar...
+
+Este curso tiene un enfoque práctico
+
+No nos adentraremos en reflexiones teóricas
+
+--
+
+...Pero nos tomaremos una licencia y tensionaremos algunos conceptos...
+
+--
+
+.center[ &lt;img src="imagenes/cuanticuali.jpg" width="500" /&gt;]
+
+---
+
+## Propuesta de estudio
+
+Queremos estudiar la ideología de los partidos
+
+--
+
+Utilizaremos sus declaraciones de principios  
+
+
+.center[ &lt;img src="imagenes/ejemplo_declaracion.png" width="600" /&gt;]
+
+--
+
+#### ¿Qué enfoque o estrategia se adecúa mejor a este problema? ¿Cuantitativo o cualitativo? 
+
+---
+
+## Wordfish (Slapin &amp; Proksch, 2008)
+
+Hacemos un pre procesamiento, para representar el texto de manera numérica 
+
+--
+
+`\(y_{ij}=Poisson(\lambda_{ij})\)`
+
+`\(\lambda_{ij} = exp(\alpha_{i} + ψ_j + β_j ∗ ω_{i})\)`
+
+`\(j\)`: palabra
+
+`\(i\)`: partido
+
+`\(ω\)`: Parámetro que indica la posición de un actor/partido
+
+`\(β\)`: Poder discriminador de las palabras
+
+
+---
+
+## Posicionamiento "ideológico"
+
+
+.center[ &lt;img src="imagenes/wordfish_declaraciones.png" width="700" /&gt;]
+
+---
+
+## Poder descriminador de palabras
+
+
+&lt;img src="introduccion_files/figure-html/unnamed-chunk-1-1.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+
+&lt;br/&gt;
+
+## ¿Qué enfoque de investigación estamos utilizando?
+
+--
+
+## ¿Cuantitativo? ¿Cualitativo? ¿Una mezcla de ambos?
+
+.center[ &lt;img src="https://media.giphy.com/media/a5viI92PAF89q/giphy.gif" width="300" /&gt;]
+
+--
+
+### ¿Y si hacemos análisis de sentimiento? ¿Detección de discursos de odio?
+
+---
+
+&lt;br/&gt;
+
+## Los límites se vuelven un poco difusos
+
+### En este curso no nos preocuparemos de estos temas
+
+--
+
+### Tendremos un espíritu abierto y sin prejuicios
+
+--
+
+### La consigna es resolver los problemas. Da igual el enfoque
+
+### Cuanti-cuali
+
+### Apertura ante herramientas (Excel, R, Python, JavaScript, C++) 
+
+---
+
+## Aspectos logísticos
+
+Sesiones expositivas y prácticas
+
+Se espera participación activa de ustedes
+
+--
+
+4 evaluaciones durante el semestre
+- 1 tarea individual
+- 3 miniproyectos grupales
+
+No hay pruebas
+
+--
+
+**Ausencia**: 25 de septiembre al 5 de octubre
+
+
+---
+class: center, middle
+
+## Métodos Computacionales para las Ciencias Sociales
+
+### Hasta la próxima clase
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

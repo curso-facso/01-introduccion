@@ -61,7 +61,7 @@ require(quanteda.textmodels)
 ]
 --
 .center[
-### Jefe técnico del proyecto ciencia de datos
+### Jefe del área de ciencia de datos
 ]
 
 
@@ -515,6 +515,28 @@ Fuente no tradicional ==> encuesta
 
 ### Las encuestas por muestreo no desaparecerán, sino que los diseños evolucionarán 
 
+
+---
+## Aporte del machine learning
+
+.center[ <img src="imagenes/machine-learning-paper.png" width="500" />]
+
+Aumento en la capacidad de codificación 
+- Métodos supervisados
+- Construcción teórica de categorías
+- Razonamiento deductivo
+
+--
+
+Nuevas herramientas para la reducción de dimensionalidad
+- Razonamiento inductivo
+- Dejar que los datos hablen
+- Interpretación teórica a postiori
+
+--
+
+Flexibilización de algunos supuestos 
+- Los métodos de machine learning no descansan en supuestos fuertes
 
 ---
 
