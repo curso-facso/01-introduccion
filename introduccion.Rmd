@@ -699,14 +699,66 @@ Se espera participación activa de ustedes
 
 4 evaluaciones durante el semestre
 - 1 tarea individual
-- 3 miniproyectos grupales
+- 2 miniproyectos grupales
+- Presentación de artículo
 
 No hay pruebas
 
 --
 
-**Ausencia**: 25 de septiembre al 5 de octubre
+**Ausencia**: 18 de octubre
 
+Recuperaremos esa clase en formato online
+
+
+---
+
+## Material de clases
+
+Todas las clases están en github
+
+[link a clases](https://github.com/orgs/curso-facso/repositories?q=sort%3Aname-asc)
+
+
+.center[ <img src="imagenes/logo-github.jpg" width="300" />]
+
+
+--
+
+Apuntes de clase (*work in progress*)
+
+[Apuntes](https://curso-facso.github.io/curso-completo/)
+
+---
+
+## ¿Cómo acceder a las clases?
+
+Enviaré antes de cada clase un link
+
+--
+
+Echemos un vistazo a github
+
+--
+
+Deben pinchar una clase en específico
+
+Deben pinchar la sección *deployments*
+
+
+---
+
+## ¿Cómo acceder a las clases?
+
+.center[ <img src="imagenes/github-1.png" width="700" />]
+
+
+
+---
+
+## ¿Cómo acceder a las clases?
+
+.center[ <img src="imagenes/github-2.png" width="800" />]
 
 ---
 class: center, middle
