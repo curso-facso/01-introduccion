@@ -36,6 +36,8 @@ class: center, middle, inverse, title-slide
 
 - Klaus Lehmann 
 
+- 36 años
+
 - klehmann@fen.uchile.cl
 
 - Sociólogo
@@ -56,15 +58,15 @@ class: center, middle, inverse, title-slide
 
 # Áreas de interés
 
-- Procesamiento de lenguaje natural
+**Ciencia de datos para la producción de estadísticas oficiales**
 
-- *Machine learning*
+- Procesamiento de lenguaje natural
 
 - Diseños muestrales complejos
 
 - Datos geoespaciales
 
-- Técnicas de reproducibilidad
+- Arquitectura de datos
 
 --
 
@@ -248,10 +250,6 @@ class: inverse center middle
 
 --
 
-- Patrones de consumo
-
---
-
 - Cantidad, momento y tipo de interacciones
 
 
@@ -287,6 +285,11 @@ class: inverse center middle
 
 
 ---
+## ¿Quién explota esta información?
+
+.center[ &lt;img src="imagenes/hacker.png" width="800" /&gt;]
+
+---
 
 ## Un ejemplo (Mäntylä,  Graziotin &amp; Kuutila, 2018)
 
@@ -297,6 +300,38 @@ Publicado en *Computer Science Review*
 --
 
 .center[ &lt;img src="imagenes/publicaciones_sentimiento.png" width="700" /&gt;]
+
+---
+
+
+class: inverse center middle
+
+# Riesgo de caer en la irrelevancia de las ciencias sociales
+
+
+---
+
+## Fenómeno transversal
+
+
+.center[ &lt;img src="imagenes/logo_ine_grande.png" width="400" /&gt;]
+
+&lt;br&gt;
+&lt;br&gt;
+
+### Naciones Unidas ha sido enfático en que las ONE deben adaptarse
+
+
+---
+## Fenómeno transversal: AI-Readiness Data
+
+.center[ &lt;img src="imagenes/chat.png" width="1000" /&gt;]
+
+
+---
+## Fenómeno transversal: AI-Readiness Data
+
+.center[ &lt;img src="imagenes/llm.png" width="900" /&gt;]
 
 ---
 
@@ -448,6 +483,22 @@ Usaron el modelo para predecir fuera de muestra
 
 ---
 
+## Pobreza en México (Banco Mundial, 2022) 
+
+
+.pull-left[ &lt;img src="imagenes/mexico.png" width="500" /&gt;]
+
+.pull-right[
+
+**Paso 1**: Entrenar un modelo con datos satelitales y datos de encuestas
+
+**Paso 2**: Usar las predicciones del modelo como una covariable en un modelo SAE
+
+
+]
+
+---
+
 ## Obama versus Romney (Wang et al, 2015) 
 
 Muestra no probabilística: ~350.000 respuestas de usuarios de XBox
@@ -462,8 +513,8 @@ La muestra fue postestratificada para reponderar a las subpoblaciones
 .center[ &lt;img src="imagenes/obama.png" width="600" /&gt;]
 
 
-
 ---
+
 
 ## Dos ejemplos cercanos
 
@@ -520,10 +571,6 @@ Nuevas herramientas para la reducción de dimensionalidad
 - Dejar que los datos hablen
 - Interpretación teórica a postiori
 
---
-
-Flexibilización de algunos supuestos 
-- Los métodos de machine learning no descansan en supuestos fuertes
 
 ---
 
@@ -676,58 +723,42 @@ Se espera participación activa de ustedes
 
 --
 
-4 evaluaciones durante el semestre
+3 evaluaciones durante el semestre
 - 1 tarea individual
 - 2 miniproyectos grupales
-- Presentación de artículo
 
 No hay pruebas
 
 --
 
-**Ausencia**: 18 de octubre
-
-Intentaremos recuperar esa clase en formato online
-
-
+**Ausencia**: Es posible que deba viajar en octubre 
 
 ---
 
 ## Fechas importantes
 
 
-**Tarea de programación**: 6 de septiembre (tendrán 3 días)
+**Tarea de programación**: 29 de agosto (tendrán 3 días)
 
-**Entrega evaluación formativa 1**: 27 de septiembre (voluntaria, pero muy recomendada)
+**Presentación y entrega de mini proyecto 1**: 26 de septiembre 
 
-**Presentación mini proyecto 1**: 11 de octubre 
-
-**Entrega evaluación formativa 2**: 15 de noviembre (voluntaria, pero muy recomendada)
-
-**Presentación mini proyecto 2**: 29 de noviembre
+**Presentación y entrega de mini proyecto 2**: 28 de noviembre
 
 ---
 
-## Artículos científicos
+## Organización de ayudantías
 
-Deben formar duplas y elegir un artículo dentro de este listado
+**Sesiones de reforzamiento sobre algunos tópicos**
 
-[listado artículos](https://1drv.ms/x/s!AuD1ibmmV6Q7ieNTC811vUfrq0_7OQ?e=dwJOWW)
+- Programación
 
---
+- Extracción de información
 
-Tendremos 2 presentaciones por clase
+- NLP
 
-Debe durar como máximo 10 minutos (**habrá descuento**)
+**Asistencia técnica para sus trabajos**
 
---
-
-Se deben abordar, al menos, los siguientes elementos:
-
-- Pregunta o motivación del artículo
-- Metodología utilizada o reflexión
-- Principales conclusiones
-
+- Los grupos serán asignados a uno de los ayudantes
 
 
 ---
@@ -791,11 +822,11 @@ class: center, middle
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"slideNumberFormat": "%current%",
-"highlightStyle": "github",
-"highlightLines": true,
-"ratio": "16:9",
-"countIncrementalSlides": true
+  "slideNumberFormat": "%current%",
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "ratio": "16:9",
+  "countIncrementalSlides": true
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
