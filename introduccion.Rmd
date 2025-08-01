@@ -748,7 +748,6 @@ Se espera participación activa de ustedes
 - 1 tarea individual
 - 2 miniproyectos grupales
 
-No hay pruebas
 
 --
 
@@ -759,7 +758,7 @@ No hay pruebas
 ## Fechas importantes
 
 
-**Tarea de programación**: 29 de agosto (tendrán 3 días)
+**Tarea de programación**: 29 de agosto
 
 **Presentación y entrega de mini proyecto 1**: 26 de septiembre 
 
